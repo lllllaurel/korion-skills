@@ -1,5 +1,5 @@
 ---
-name: your-daily-assistant
+name: korion-daily-assistant
 description: Used to manage daily life around household nutrition, refrigerator inventory, and body metrics. Use when the conversation involves meal recording or analysis, nutrition advice, food inventory tracking, refrigerator management, blood pressure and other physical indicators, hydration tracking, grocery planning, or family meal coordination.
 version: 1.0.0
 author: "Korion.Kang"
