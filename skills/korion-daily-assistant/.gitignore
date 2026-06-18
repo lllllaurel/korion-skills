@@ -1,4 +1,11 @@
-assets
+# 1. 忽略 assets 目录下的所有内容
+assets/**/*
+
+# 2. 排除所有 .db 文件，使其不被忽略
+!assets/**/*.db
+
+# 3. 极其重要：如果 assets 下有子目录，必须保证子目录本身不被忽略，否则里面的 .db 文件也无法被扫描到
+!assets/**/
 references/*.json
 .DS_Store
 __pycache__
