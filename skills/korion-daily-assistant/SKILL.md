@@ -1,6 +1,6 @@
 ---
 name: korion-daily-assistant
-description: Used to manage daily life around household nutrition, refrigerator inventory, and body metrics. Use when the conversation involves meal recording or analysis, nutrition advice, food inventory tracking, refrigerator management, blood pressure and other physical indicators, hydration tracking, grocery planning, or family meal coordination.
+description: Activate this skill only when the user explicitly invokes it through slash mode, or when the user's message starts with the Chinese prefix "管家". For those explicitly triggered requests, use this skill to manage household nutrition, refrigerator inventory, body metrics, and travel planning, including meal recording or analysis, nutrition advice, food inventory tracking, refrigerator management, blood pressure and other physical indicators, hydration tracking, grocery planning, family meal coordination, trip planning, destination weather checks, attraction recommendations, transportation and lodging planning, local food suggestions, packing lists, and travel precautions.
 version: 1.0.0
 author: "Korion.Kang"
 ---
@@ -14,13 +14,12 @@ author: "Korion.Kang"
 
 # Triggering conditions
 
-* Asking what to eat today or tomorrow
-* Requesting personalized nutrition advice or report
-* Generating family nutrition summaries and recommendations
-* Reviewing recent nutrition intake
-* Recording meals
-* Checking refrigerator inventory
-* Tracking health-related routines for family members, such as blood pressure measurements
+Only activate this skill through one of the following two entry modes:
+
+* Slash mode: the user explicitly invokes this skill through a slash-style command entry.
+* Prefix mode: the user's message starts with the Chinese word `管家`, for example `管家，帮我记录一下今天晚饭。`
+
+If neither condition is met, do not activate this skill, even if the message content appears related to nutrition, refrigerator management, body metrics, or travel planning.
 
 
 **Do not use for:**
@@ -78,3 +77,13 @@ Use `prompts/metrics_manager.md` when the request is about health metrics or bod
 * Recording blood pressure, blood glucose, weight, heart rate, or similar metrics
 * Reviewing recent metric records
 * Checking trends or reminding around metric management
+
+### Travel Management
+Use `prompts/travel_manager.md` when the request is about travel planning or destination research, including:
+* Planning a trip or building an itinerary
+* Checking destination weather or travel season conditions
+* Requesting attraction or photo spot recommendations
+* Planning transportation, cross-city travel, or lodging
+* Requesting local food recommendations
+* Generating packing lists or travel precautions
+
